@@ -4,6 +4,7 @@
 #'
 #' @return DataFrame of Neuroconductor packages
 #' @importFrom httr content GET stop_for_status
+#' @importFrom dplyr bind_rows
 #' @export
 get_package_list  = function(error = FALSE)
 {

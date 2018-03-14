@@ -4,7 +4,10 @@
 \alias{get_package_list}
 \title{Retrieve Neuroconductor package list}
 \usage{
-get_package_list()
+get_package_list(error = FALSE)
+}
+\arguments{
+\item{error}{Should function error if httr::GET failed}
 }
 \value{
 DataFrame of Neuroconductor packages
