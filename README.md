@@ -1,6 +1,6 @@
 # neurocStats: Package that retrieves Neuroconductor stats
 [![Travis build status](https://travis-ci.org/adigherman/neurocStats.svg?branch=master)](https://travis-ci.org/adigherman/neurocStats)
-[![AppVeyor Build Status](https://ci.appveyor.com/adigherman/neurocStats)](https://ci.appveyor.com/api/projects/status/github//adigherman/neurocStats/?branch=master&svg=true)
+[![Build status](https://ci.appveyor.com/api/projects/status/1tjf5b78sd2osdlk?svg=true)](https://ci.appveyor.com/project/adigherman/neurocstats)
 [![Coverage status](https://codecov.io/gh/adigherman/neurocStats/branch/master/graph/badge.svg)](https://codecov.io/github/adigherman/neurocStats?branch=master)
 
 ## Installing the neurocStats package
@@ -60,3 +60,30 @@ $maintainer
 [1] "John Muschelli"
 ```
 
+## Get download statistics
+
+The get download statistics we can use the `get_download_stats()` function. The function accepts the following parameters: `package` indicating the name of the package for which we need download counts. If `package` is missing or NULL, the download counts for all Neuroconductor packages are returned. The second argument is `verbose` which will provide a compact result (when `verbose` is missing / FALSE) (total number of downloads) versus a detailed list of downloads that will include the package name, version, type of download (for which platform), country from where the download was initiated and the timestamp for the request.
+
+``` {r}
+> total_downloads <- get_download_stats()
+> head(total_downloads)
+    package downloads
+1     afnir         7
+2     ANTsR        80
+3 ANTsRCore        75
+4    brainR         3
+5     cifti       112
+6  dcemriS4         3
+```
+
+``` {r}
+> afnir_downloads_verbose <- get_download_stats('afnir', verbose = TRUE)
+> head(afnir_downloads_verbose)
+  package version country OS.type           timestamp
+1   afnir   0.4.4      US     osx 2017-12-05 13:52:57
+2   afnir   0.4.4      US     src 2017-12-08 18:59:25
+3   afnir   0.4.4      US     src 2017-12-08 19:07:35
+4   afnir   0.4.4      US     src 2018-01-27 16:57:05
+5   afnir   0.4.4      US     src 2018-01-28 22:22:40
+6   afnir   0.4.4      US     src 2018-01-29 13:18:00
+```
