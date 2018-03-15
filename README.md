@@ -21,14 +21,14 @@ neuroconductor_packages <- get_package_list()
 ```
 
 ``` {r}
-> head(neuroconductor_packages)
-       name                                                                            title
-1     afnir             Wrapper Functions for 'AFNI' (Analysis of Functional 'NeuroImages') 
-2     ANTsR                           ANTs in R: Quantification Tools for Biomedical Images 
-3 ANTsRCore                                          Core Software Infrastructure for ANTsR 
-4    brainR               Helper Functions to 'misc3d' and 'rgl' Packages for Brain Imaging 
-5     cifti Toolbox for Connectivity Informatics Technology Initiative ('CIFTI')      Files 
-6  dcemriS4                     A Package for Image Analysis of DCE-MRI (S4 Implementation) 
+> head(get_package_list())
+       name                                                                            title package_type
+1     afnir             Wrapper Functions for 'AFNI' (Analysis of Functional 'NeuroImages')      standard
+2     ANTsR                           ANTs in R: Quantification Tools for Biomedical Images      standard
+3 ANTsRCore                                          Core Software Infrastructure for ANTsR      standard
+4    brainR               Helper Functions to 'misc3d' and 'rgl' Packages for Brain Imaging      standard
+5     cifti Toolbox for Connectivity Informatics Technology Initiative ('CIFTI')      Files      standard
+6  dcemriS4                     A Package for Image Analysis of DCE-MRI (S4 Implementation)      standard
 ```
 
 ## Retrieve Neuroconductor package details
@@ -41,23 +41,47 @@ fslr_details <- get_package_details('fslr')
 
 ``` {r}
 > fslr_details
-$name
-[1] "fslr"
-
-$title
-[1] "Wrapper Functions for FSL ('FMRIB' Software Library) from Functional MRI     of the Brain ('FMRIB') "
-
-$description
-[1] "Wrapper functions that interface with 'FSL'      , a powerful and commonly-used 'neuroimaging'     software, using system commands. The goal is to be able to interface with 'FSL'     completely in R, where you pass R objects of class 'nifti', implemented by     package 'oro.nifti', and the function executes an 'FSL' command and returns an R     object of class 'nifti' if desired. "
-
-$submitted_on
-[1] "9:19am on Sunday 8th October 2017"
-
-$authors
-[1] "John Muschelli"
-
-$maintainer
-[1] "John Muschelli"
+Type: Package
+Package: fslr
+Title: Wrapper Functions for FSL ('FMRIB' Software Library) from
+    Functional MRI of the Brain ('FMRIB')
+Version: 2.17.3
+Authors@R (parsed):
+    * John Muschelli <muschellij2@gmail.com> [aut, cre]
+Maintainer: John Muschelli <muschellij2@gmail.com>
+Description: Wrapper functions that interface with 'FSL'
+    <http://fsl.fmrib.ox.ac.uk/fsl/fslwiki/>, a powerful and commonly-used
+    'neuroimaging' software, using system commands. The goal is to be able
+    to interface with 'FSL' completely in R, where you pass R objects of
+    class 'nifti', implemented by package 'oro.nifti', and the function
+    executes an 'FSL' command and returns an R object of class 'nifti' if
+    desired.
+License: GPL-3
+BugReports: https://github.com/muschellij2/fslr/issues
+Depends:
+    oro.nifti (>= 0.5.0),
+    neurobase,
+    R (>= 3.2.0)
+Imports:
+    methods,
+    matrixStats,
+    R.utils,
+    graphics,
+    grDevices,
+    stats,
+    utils
+Suggests:
+    knitr,
+    rmarkdown,
+    covr
+VignetteBuilder: knitr
+biocViews:
+Encoding: UTF-8
+Remotes:
+    neuroconductor/oro.nifti@b2b5e408785973e074bdf2f520720a79c23b6ffa,
+    neuroconductor/neurobase@a8c7908b98784ee2373508c5d4212659e7b90a9a
+RoxygenNote: 6.0.1.9000
+SystemRequirements: FSL
 ```
 
 ## Get download statistics

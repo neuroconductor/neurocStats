@@ -12,7 +12,7 @@ get_package_details(package, error = FALSE)
 \item{error}{Should function error if httr::GET failed}
 }
 \value{
-DataFrame of Neuroconductor package details
+content of the DESCRIPTION file
 }
 \description{
 Retrieves the full details for a Neuroconductor package
