@@ -125,3 +125,13 @@ To get a list with all available Neuroconductor releases, we'll use the `list_re
 4  releases/latest/stable
 ```
 
+## Get release details
+
+To get a comprehensive list of package details for a specific release we'll use the `get_release_details()` function.
+
+``` {r}
+> release_details <- get_release_details(year = "2017", month = "nov", os = "osx")
+> head(release_details,1)
+  Package Version                       Imports Suggests License                           MD5sum Depends LinkingTo Archs Enhances
+1   afnir   0.4.4 methods, oro.nifti, neurobase     covr   GPL-2 389bac94bd7e8a677c946c2349ebd070    <NA>      <NA>  <NA>     <NA>
+```
