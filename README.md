@@ -111,3 +111,17 @@ The get download statistics we can use the `get_download_stats()` function. The 
 5   afnir   0.4.4      US     src 2018-01-28 22:22:40
 6   afnir   0.4.4      US     src 2018-01-29 13:18:00
 ```
+
+## List available Neuroconductor releases
+
+To get a list with all available Neuroconductor releases, we'll use the `list_releases()` function. 
+
+``` {r}
+> list_releases()
+           release folder
+1       releases/2017/nov
+2       releases/2018/feb
+3 releases/latest/current
+4  releases/latest/stable
+```
+
