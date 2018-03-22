@@ -4,7 +4,20 @@
 \alias{get_release_details}
 \title{Retrieve release details}
 \usage{
-get_release_details()
+get_release_details(release = NULL, latest = NULL, year = NULL,
+  month = NULL, os = "unix")
+}
+\arguments{
+\item{release}{One of the releases listed by the `list_releases()` function
+defaults to the latest stable release}
+
+\item{latest}{Get the release details for the latest release (can be stable or current)}
+
+\item{year}{Specify the year for the queries release}
+
+\item{month}{Specify the month of the release (first 3 letters of the month, lower cap)}
+
+\item{os}{Get the release details just for this OS (can be win, osx, unix)}
 }
 \value{
 Content of the PACKAGES file associated with a specific release
