@@ -9,7 +9,7 @@ You can install `neurocStats` from github with:
 
 ``` {r}
 # install.packages("devtools")
-devtools::install_github("adigherman/neurocStats")
+> devtools::install_github("adigherman/neurocStats")
 ```
 
 ## Listing all Neuroconductor packages
@@ -17,7 +17,7 @@ devtools::install_github("adigherman/neurocStats")
 To get a full list of Neuroconductor packages, the function `get_package_list()` can be used:
 
 ``` {r}
-neuroconductor_packages <- get_package_list()
+> neuroconductor_packages <- get_package_list()
 ```
 
 ``` {r}
@@ -36,7 +36,7 @@ neuroconductor_packages <- get_package_list()
 To get a the details for a specific Neuroconductor package we'll use the `get_package_details()` function:
 
 ``` {r}
-fslr_details <- get_package_details('fslr')
+> fslr_details <- get_package_details('fslr')
 ```
 
 ``` {r}
