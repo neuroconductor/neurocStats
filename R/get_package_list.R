@@ -9,7 +9,7 @@
 get_package_list  = function(error = FALSE)
 {
   args = list(
-    url = "https://neuroconductor.org/api/list-packages"
+    url = "https://neuroconductor.org/api/list_packages"
   )
   ret <- do.call("GET", args)
 
