@@ -7,6 +7,7 @@
 #' @return DataFrame with the download stats
 #' @importFrom RCurl getURL
 #' @importFrom jsonlite fromJSON
+#' @importFrom dplyr count
 #' @export
 get_download_stats = function(package = NULL,
                               verbose = FALSE,
@@ -27,7 +28,7 @@ get_download_stats = function(package = NULL,
     rownames(download_stats) <- NULL
     return(download_stats)
   }
-  download_stats <- data.frame(count(download_stats,name))
+  download_stats <- data.frame(count(download_stats,download_stats$name))
   names(download_stats) <- c("package","downloads")
 
   if(is.null(package) && verbose == FALSE)

@@ -1,6 +1,5 @@
 #' @title List Neurocnductor releases
 #' @description Retrieves the full list of Neuroconductor releases
-#' @param verbose If TRUE, list all files from all releases
 #'
 #' @importFrom jsonlite fromJSON
 #' @importFrom RCurl getURL

@@ -6,9 +6,6 @@
 \usage{
 list_releases()
 }
-\arguments{
-\item{verbose}{If TRUE, list all files from all releases}
-}
 \value{
 Data.frame of all releases
 }
