@@ -4,7 +4,7 @@
 \alias{list_releases}
 \title{List Neurocnductor releases}
 \usage{
-list_releases(verbose = FALSE)
+list_releases()
 }
 \arguments{
 \item{verbose}{If TRUE, list all files from all releases}

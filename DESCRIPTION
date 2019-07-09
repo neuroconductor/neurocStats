@@ -1,8 +1,8 @@
 Package: neurocStats
-Version: 0.0.0.9000
+Version: 0.1.0
 Title: Package that Retrieves Neuroconductor Stats
 Description: Provides access to various Neuroconductor <https://neuroconductor.org> stats.
-Depends: httr, dplyr, desc
+Depends: httr, dplyr, desc, jsonlite, RCurl
 Authors@R: person("Adi", "Gherman", email = "adig@jhu.edu", role = c("aut", "cre"))
 License: GPL-2
 Encoding: UTF-8
@@ -11,4 +11,4 @@ ByteCompile: true
 Suggests: 
     covr,
     testthat
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.1

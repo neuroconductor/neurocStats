@@ -5,40 +5,39 @@
 #' @param error Should function error if httr::GET failed
 #'
 #' @return DataFrame with the download stats
-#' @importFrom httr content GET stop_for_status
-#' @importFrom dplyr bind_rows
+#' @importFrom RCurl getURL
+#' @importFrom jsonlite fromJSON
 #' @export
 get_download_stats = function(package = NULL,
                               verbose = FALSE,
                               error = FALSE)
 {
   url <- "https://neuroconductor.org/api/downloads"
-  if(verbose){
-    url <- paste0(url,"/verbose")
-  }
-  if(is.null(package)){
-    package <- 'all'
-  }
-  url <- paste0(url,"/",package)
 
-  args = list(
-    url <- url
-  )
-  ret <- do.call("GET", args)
+  download_stats <- fromJSON(getURL(url))
+  download_stats <- data.frame(download_stats)
 
-  if (error) {
-    stop_for_status(ret)
-  }
-
-  download_stats <- content(ret)
-
-  if(!is.null(package) && verbose == FALSE && package != "all")
+  if(is.null(package) && verbose == TRUE)
   {
-    message('here')
-    return(data.frame(download_stats))
+    return(download_stats)
   }
+  if(!is.null(package) && verbose == TRUE)
+  {
+    download_stats <- download_stats[download_stats$name==package,]
+    rownames(download_stats) <- NULL
+    return(download_stats)
+  }
+  download_stats <- data.frame(count(download_stats,name))
+  names(download_stats) <- c("package","downloads")
 
-  download_stats <- bind_rows(lapply(download_stats, as.data.frame, stringsAsFactors = FALSE))
-
-  return(download_stats)
+  if(is.null(package) && verbose == FALSE)
+  {
+    return(download_stats)
+  }
+  if(!is.null(package) && verbose == FALSE)
+  {
+    download_stats <- download_stats[download_stats$package==package,]$downloads
+    rownames(download_stats) <- NULL
+    return(download_stats)
+  }
 }

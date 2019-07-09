@@ -3,22 +3,15 @@
 #' @param error Should function error if httr::GET failed
 #'
 #' @return DataFrame of Neuroconductor packages
-#' @importFrom httr content GET stop_for_status
-#' @importFrom dplyr bind_rows
+#' @importFrom RCurl getURL
+#' @importFrom jsonlite fromJSON
 #' @export
 get_package_list  = function(error = FALSE)
 {
-  args = list(
-    url = "https://neuroconductor.org/api/list_packages"
-  )
-  ret <- do.call("GET", args)
+  url <- "https://neuroconductor.org/api/packages"
 
-  if (error) {
-    stop_for_status(ret)
-  }
+  package_list <- fromJSON(getURL(url))
+  package_list <- data.frame(package_list)
 
-  neuroc_packages <- content(ret)
-  neuroc_packages <- bind_rows(lapply(neuroc_packages$packages, as.data.frame, stringsAsFactors = FALSE))
-
-  return(neuroc_packages)
+  return(package_list)
 }

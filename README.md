@@ -21,14 +21,14 @@ To get a full list of Neuroconductor packages, the function `get_package_list()`
 ```
 
 ``` {r}
-> head(get_package_list())
-       name                                                                            title package_type
-1     afnir             Wrapper Functions for 'AFNI' (Analysis of Functional 'NeuroImages')      standard
-2     ANTsR                           ANTs in R: Quantification Tools for Biomedical Images      standard
-3 ANTsRCore                                          Core Software Infrastructure for ANTsR      standard
-4    brainR               Helper Functions to 'misc3d' and 'rgl' Packages for Brain Imaging      standard
-5     cifti Toolbox for Connectivity Informatics Technology Initiative ('CIFTI')      Files      standard
-6  dcemriS4                     A Package for Image Analysis of DCE-MRI (S4 Implementation)      standard
+> head(neuroconductor_packages)
+       name                                                                                   title      maintainer     type
+1       aal                                               Automated Anatomical Labeling (AAL) Atlas  John Muschelli standard
+2     afnir                          Wrapper Functions for AFNI (Analysis of FunctionalNeuroImages)  John Muschelli standard
+3     ANTsR                                   ANTs in R: Quantification Tools for Biomedical Images Brian B. Avants standard
+4 ANTsRCore                                                  Core Software Infrastructure for ANTsR Brian B. Avants standard
+5   bftools                                                                        BioFormats Tools  John Muschelli standard
+6 brainKCCA Region-level Connectivity Network Construction via KernelCanonical Correlation Analysis       Jian Kang standard
 ```
 
 ## Retrieve Neuroconductor package details
@@ -101,15 +101,15 @@ The get download statistics we can use the `get_download_stats()` function. The 
 ```
 
 ``` {r}
-> afnir_downloads_verbose <- get_download_stats('afnir', verbose = TRUE)
-> head(afnir_downloads_verbose)
-  package version country OS.type           timestamp
-1   afnir   0.4.4      US     osx 2017-12-05 13:52:57
-2   afnir   0.4.4      US     src 2017-12-08 18:59:25
-3   afnir   0.4.4      US     src 2017-12-08 19:07:35
-4   afnir   0.4.4      US     src 2018-01-27 16:57:05
-5   afnir   0.4.4      US     src 2018-01-28 22:22:40
-6   afnir   0.4.4      US     src 2018-01-29 13:18:00
+> Rxnat_downloads_verbose <- get_download_stats('Rxnat', verbose = TRUE)
+> head(Rxnat_downloads_verbose)
+   name package_version country os_type r_version             IP           timestamp
+1 Rxnat      0.0.0.9005      FR     src            54.36.148.204 2019-03-22 10:23:38
+2 Rxnat      0.0.0.9005      FR     osx       3.5  54.36.150.149 2019-04-08 01:25:18
+3 Rxnat      0.0.0.9005      FI     src            95.216.21.107 2019-04-26 07:41:12
+4 Rxnat      0.0.0.9005      US     win       3.5  69.30.198.242 2019-04-26 13:36:29
+5 Rxnat      0.0.0.9005      DE     osx       3.5 136.243.70.151 2019-04-26 17:32:54
+6 Rxnat      0.0.0.9005      FR     osx       3.5   54.36.150.73 2019-06-02 00:13:34
 ```
 
 ## List available Neuroconductor releases
