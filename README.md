@@ -33,10 +33,10 @@ To get a full list of Neuroconductor packages, the function `get_package_list()`
 
 ## Retrieve Neuroconductor package details
 
-To get a the details for a specific Neuroconductor package we'll use the `get_package_details()` function:
+To get the DESCRIPTION file content for a specific Neuroconductor package we'll use the `get_package_description()` function:
 
 ``` {r}
-> fslr_details <- get_package_details('fslr')
+> fslr_details <- get_package_description('fslr')
 ```
 
 ``` {r}
