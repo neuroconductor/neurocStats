@@ -1,5 +1,5 @@
-#' @title Retrieve Neuroconductor package details
-#' @description Retrieves the full details for a Neuroconductor package
+#' @title Retrieve Neuroconductor package DESCRIPTION file
+#' @description Retrieves the DESCRIPTION file for a Neuroconductor package
 #' @param package Name of the package we need details for
 #' @param error Should function error if httr::GET failed
 #'
@@ -7,7 +7,7 @@
 #' @importFrom httr content GET stop_for_status
 #' @importFrom desc description
 #' @export
-get_package_details = function(package,
+get_package_description = function(package,
                                error = FALSE) {
   args = list(
     url = paste0("https://raw.githubusercontent.com/neuroconductor/",package,"/master/DESCRIPTION")
