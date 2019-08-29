@@ -1,6 +1,6 @@
 #' @title Retrieve Neuroconductor package DESCRIPTION file
 #' @description Retrieves the DESCRIPTION file for a Neuroconductor package
-#' @param package Name of the package we need details for
+#' @param package Name of the package
 #' @param error Should function error if httr::GET failed
 #'
 #' @return content of the DESCRIPTION file
