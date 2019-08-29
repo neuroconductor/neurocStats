@@ -31,12 +31,12 @@ To get a full list of Neuroconductor packages, the function `get_package_list()`
 6 brainKCCA Region-level Connectivity Network Construction via KernelCanonical Correlation Analysis       Jian Kang standard
 ```
 
-## Retrieve Neuroconductor package details
+## Retrieve Neuroconductor package description
 
 To get the DESCRIPTION file content for a specific Neuroconductor package we'll use the `get_package_description()` function:
 
 ``` {r}
-> fslr_details <- get_package_description('fslr')
+> fslr_description <- get_package_description('fslr')
 ```
 
 ``` {r}
@@ -82,6 +82,14 @@ Remotes:
     neuroconductor/neurobase@a8c7908b98784ee2373508c5d4212659e7b90a9a
 RoxygenNote: 6.0.1.9000
 SystemRequirements: FSL
+```
+
+## Retrieve Neuroconductor package description
+
+To get the full package details for a specific Neuroconductor package
+
+``` {r}
+> fslr_details <- get_package_details('fslr')
 ```
 
 ## Get download statistics

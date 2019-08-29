@@ -2,6 +2,7 @@
 
 export(get_download_stats)
 export(get_package_description)
+export(get_package_details)
 export(get_package_list)
 export(get_release_details)
 export(list_releases)
