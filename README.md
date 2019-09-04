@@ -111,13 +111,13 @@ The get download statistics we can use the `get_download_stats()` function. The 
 ``` {r}
 > Rxnat_downloads_verbose <- get_download_stats('Rxnat', verbose = TRUE)
 > head(Rxnat_downloads_verbose)
-   name package_version country os_type r_version             IP           timestamp
-1 Rxnat      0.0.0.9005      FR     src            54.36.148.204 2019-03-22 10:23:38
-2 Rxnat      0.0.0.9005      FR     osx       3.5  54.36.150.149 2019-04-08 01:25:18
-3 Rxnat      0.0.0.9005      FI     src            95.216.21.107 2019-04-26 07:41:12
-4 Rxnat      0.0.0.9005      US     win       3.5  69.30.198.242 2019-04-26 13:36:29
-5 Rxnat      0.0.0.9005      DE     osx       3.5 136.243.70.151 2019-04-26 17:32:54
-6 Rxnat      0.0.0.9005      FR     osx       3.5   54.36.150.73 2019-06-02 00:13:34
+   name package_version country os_type r_version   timestamp
+1 Rxnat      0.0.0.9005      FR     src             2019-03-22 10:23:38
+2 Rxnat      0.0.0.9005      FR     osx       3.5   2019-04-08 01:25:18
+3 Rxnat      0.0.0.9005      FI     src             2019-04-26 07:41:12
+4 Rxnat      0.0.0.9005      US     win       3.5   2019-04-26 13:36:29
+5 Rxnat      0.0.0.9005      DE     osx       3.5   2019-04-26 17:32:54
+6 Rxnat      0.0.0.9005      FR     osx       3.5   2019-06-02 00:13:34
 ```
 
 ## List available Neuroconductor releases
