@@ -4,14 +4,12 @@
 \alias{get_download_stats}
 \title{Get Neuroconductor download stats}
 \usage{
-get_download_stats(package = NULL, verbose = FALSE, error = FALSE)
+get_download_stats(package = NULL, verbose = FALSE)
 }
 \arguments{
 \item{package}{Retrieve download stats for this package, if null return stats for all packages}
 
 \item{verbose}{Get a compact or a detailed listing of downloads}
-
-\item{error}{Should function error if httr::GET failed}
 }
 \value{
 DataFrame with the download stats

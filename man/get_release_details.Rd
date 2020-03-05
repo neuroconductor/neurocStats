@@ -4,8 +4,13 @@
 \alias{get_release_details}
 \title{Retrieve release details}
 \usage{
-get_release_details(release = NULL, latest = NULL, year = NULL,
-  month = NULL, os = "unix")
+get_release_details(
+  release = NULL,
+  latest = NULL,
+  year = NULL,
+  month = NULL,
+  os = "unix"
+)
 }
 \arguments{
 \item{release}{One of the releases listed by the `list_releases()` function
