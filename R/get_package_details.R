@@ -13,7 +13,8 @@ get_package_details = function(package,
   url <- paste0("https://neuroconductor.org/api/package/",package)
 
   package_details <- fromJSON(url)
-  package_details <- data.frame(package_details)
+  #package_details <- data.frame(package_details)
 
   return(package_details)
 }
+

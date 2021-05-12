@@ -1,5 +1,5 @@
 Package: neurocStats
-Version: 0.1.2
+Version: 0.1.3
 Title: Package that Retrieves Neuroconductor Stats
 Description: Provides access to various Neuroconductor <https://neuroconductor.org> stats.
 Imports: httr, dplyr, desc, jsonlite, RCurl
