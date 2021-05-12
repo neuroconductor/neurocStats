@@ -1,5 +1,5 @@
 # neurocStats: Package that retrieves Neuroconductor stats
-[![Travis build status](https://travis-ci.org/adigherman/neurocStats.svg?branch=master)](https://travis-ci.org/adigherman/neurocStats)
+[![Travis build status](https://travis-ci.com/adigherman/neurocStats.svg?branch=master)](https://travis-ci.com/adigherman/neurocStats)
 [![Build status](https://ci.appveyor.com/api/projects/status/1tjf5b78sd2osdlk?svg=true)](https://ci.appveyor.com/project/adigherman/neurocstats)
 [![Coverage status](https://codecov.io/gh/adigherman/neurocStats/branch/master/graph/badge.svg)](https://codecov.io/github/adigherman/neurocStats?branch=master)
 
