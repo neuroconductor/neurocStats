@@ -3,3 +3,8 @@
 ^appveyor\.yml$
 ^\.travis\.yml$
 ^codecov\.yml$
+^DESCRIPTION\.bak$
+^\.github$
+^autoci\.yml$
+^autoci_pkgdown\.yml$
+^tic\.R$
